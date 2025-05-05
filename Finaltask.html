@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jonathan Padre | Portfolio</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #0e76a8;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    header img {
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      margin-top: 15px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #fff;
+      border-bottom: 2px solid #ccc;
+    }
+
+    nav button {
+      background: none;
+      border: none;
+      padding: 15px 20px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s;
+    }
+
+    nav button:hover {
+      background-color: #e6e6e6;
+    }
+
+    .tab-content {
+      display: none;
+      padding: 20px;
+    }
+
+    .active-tab {
+      display: block;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #0e76a8;
+    }
+
+    ul {
+      list-style-type: square;
+    }
+
+    .cert-img {
+      width: 200px;
+      margin: 10px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Jonathan Padre</h1>
+    <p>Future IT Specialist | Web Developer | Database Enthusiast</p>
+    <img src="Personal.jpg" alt="Profile Photo">
+  </header>
+
+  <nav>
+    <button onclick="showTab('skills')">Skills</button>
+    <button onclick="showTab('experience')">Experience</button>
+    <button onclick="showTab('certifications')">Certifications</button>
+    <button onclick="showTab('info')">About Me</button>
+    <button onclick="showTab('objective')">Objective</button>
+  </nav>
+
+  <div class="container">
+    <div id="skills" class="tab-content active-tab">
+      <h2>Skills</h2>
+      <ul>
+        <li>MySQL, PostgreSQL</li>
+        <li>PHP, JavaScript, HTML5, CSS3</li>
+        <li>Python (Beginner-Intermediate)</li>
+        <li>UI/UX Design with Figma</li>
+        <li>Git and GitHub</li>
+      </ul>
+    </div>
+
+    <div id="experience" class="tab-content">
+      <h2>Experience</h2>
+      <p><strong>Ilearn Tech (Capstone Project)</strong><br>
+      Developer of an online learning platform for MySQL programming. Worked on backend logic, UI design, and database integration.</p>
+    </div>
+
+    <div id="certifications" class="tab-content">
+      <h2>Certifications</h2>
+      <ul>
+        <li>Phyton Essentials 1</li>
+        <li>Cyber Security Essentials</li>
+      <img src="ach.jpg" alt="Certificate 1" class="cert-img">
+      <img src="puto.jpg" alt="Certificate 2" class="cert-img">
+    </div>
+
+    <div id="info" class="tab-content">
+      <h2>Personal Information</h2>
+      <ul>
+        <li><strong>Name:</strong> Jonathan Padre</li>
+        <li><strong>Email:</strong> jonathan.padre@email.com</li>
+        <li><strong>Location:</strong> Philippines</li>
+        <li><strong>LinkedIn:</strong> linkedin.com/in/jonathanpadre</li>
+      </ul>
+    </div>
+
+    <div id="objective" class="tab-content">
+      <h2>Professional Objective</h2>
+      <p>To become a highly skilled full-stack web developer with a strong foundation in database management, and contribute to the growth of tech-driven learning platforms that empower IT students worldwide.</p>
+    </div>
+  </div>
+
+  <script>
+    function showTab(tabId) {
+      const tabs = document.querySelectorAll('.tab-content');
+      tabs.forEach(tab => tab.classList.remove('active-tab'));
+      document.getElementById(tabId).classList.add('active-tab');
+    }
+  </script>
+</body>
+</html>
